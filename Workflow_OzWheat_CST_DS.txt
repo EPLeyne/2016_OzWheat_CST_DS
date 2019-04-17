@@ -1,0 +1,53 @@
+Workflow for Team OZWHEAT (Emmett & Gordon)
+
+1.Working Together
+    Directory Structure
+    2016_OzWheat_CST_DS
+        Raw_Data (on Bowen)
+        Scripts_Python (individuals home on Pearcey)
+        Scripts_R (individuals home on Pearcey)
+        Output (depends on file size; Bowen or individuals home on Pearcey)
+
+    Setup GitHub repository, for version control.
+    One person create GitHub Repository and invite other person.
+    Other person then clone it to the home in Pearcey.
+
+    Create Readme file.
+    This will be updated as we go. 
+    Containing everything that is needed to understand dataset & scripts.
+
+2. Metadata
+   Reading to understand FASTQ format.
+   Reading to understand how to read file.gz (zcat, zgrep, 7zip?)i
+   Decide what metatdat is needed from sample.txt, .csv file & squence headers.
+   Create Script (Python or R?) to pull this metadata into a file to form a
+   tidy data frame with columns seperated by 'tab' characters.
+
+3. Process
+   Reading to understand Fastqc.
+   Trial run; start in pearcey, load Fastqc, run from command line,look at output.
+   Understand what Fastqc output looks like.
+   Delete this trial output.
+   Put command to run a single file inside batch script.
+   Submit your script to queue.
+   Check status of your job submission.
+   When run completed, check output.
+   Modify your script to run on ALL your fastqc files.
+   (consider regular expressions, fastqc command flags to increase the 
+number of files processed at once, for loops, array jobs).
+
+4. Align
+    Align the sequence reads to a reference genome.
+    Compare the sequence of 100 to entire oragnism genome, & work out where 
+it came from.
+    Produce table of counts along genome.
+    Download uo-to-date reference genome from NCBI Genome database.
+    Read up on STAR & HiSAT2.
+    Create scripts to process, as in 3 above.
+
+5. Count
+
+6. Visualisation-challenge exercise
+
+7. Parameter sweep-stretch exercise
+	
