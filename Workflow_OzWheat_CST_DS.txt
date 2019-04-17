@@ -1,18 +1,18 @@
 Workflow for Team OZWHEAT (Emmett & Gordon)
 
 1.Working Together
-    Directory Structure
+    Directory Structure		DONE
     2016_OzWheat_CST_DS
         Raw_Data (on Bowen)
         Scripts_Python (individuals home on Pearcey)
         Scripts_R (individuals home on Pearcey)
         Output (depends on file size; Bowen or individuals home on Pearcey)
 
-    Setup GitHub repository, for version control.
+    Setup GitHub repository, for version control.		DONE
     One person create GitHub Repository and invite other person.
     Other person then clone it to the home in Pearcey.
 
-    Create Readme file.
+    Create Readme file.		DONE
     This will be updated as we go. 
     Containing everything that is needed to understand dataset & scripts.
 
@@ -51,3 +51,5 @@ it came from.
 
 7. Parameter sweep-stretch exercise
 	
+
+
