@@ -13,3 +13,6 @@ for file in files:
                     out_file.write(x[0:27])
                     out_file.write('\n')
                     num =+ 1
+
+
+# Need to add script down here to delimit and delete unwanted data, might be better in R but will look it up.
