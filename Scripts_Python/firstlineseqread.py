@@ -1,4 +1,5 @@
 # Script to iterate through the .fastq files in the directory and write the first 4 items of metadata from the first line to a file. 
+import glob
 
 files = glob.glob('data/fastq/*.fastq')   #glob.glob to make a list of all the files in the directory (need to change path as needed)
 
