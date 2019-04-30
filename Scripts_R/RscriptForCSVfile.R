@@ -6,6 +6,8 @@
 #install.packages('tidyverse')
 library(tidyverse)
 
+#Need to show which directory .csv file is in, currently in same directory.
+
 SAMPLES <- read.csv("R_161128_SHADIL_LIB2500_M002.csv", skip=14)
 NEWSAMPLES1<- SAMPLES[ -c (2,4,7,8)]
 NEWSAMPLES2 <- separate(NEWSAMPLES1, "Index", c("Index1", "Index2", "Index_Sequence"), sep=" ")
@@ -36,5 +38,10 @@ NEWSAMPLES5$Sample_ID <- sprintf("%02d", as.numeric(NEWSAMPLES5$Sample_ID))
 
 NEWSAMPLES6 <- NEWSAMPLES5[order(NEWSAMPLES5$Sample_ID),]
 NEWSAMPLES7 <- NEWSAMPLES6[order(NEWSAMPLES6$Treatment),]
+
+#need to create output file tab delimited for NEWSAMPLES7
+#need to specify which directory to send it to, currently in same directory.
+
+write.table(NEWSAMPLES7, "metadatatest.txt", sep="\t")
 
 #Ready to join with metadata from .gz files
