@@ -8,7 +8,7 @@ library(tidyverse)
 
 #Need to show which directory .csv file is in, currently in same directory.
 
-SAMPLES <- read.csv("R_161128_SHADIL_LIB2500_M002.csv", skip=14)
+SAMPLES <- read.csv("/OSM/CBR/AF_DATASCHOOL/input/2019-04-12_Transcritome/R_161128_SHADIL_LIB2500_M002.csv", skip=14)
 NEWSAMPLES1<- SAMPLES[ -c (2,4,7,8)]
 NEWSAMPLES2 <- separate(NEWSAMPLES1, "Index", c("Index1", "Index2", "Index_Sequence"), sep=" ")
 
@@ -42,6 +42,6 @@ NEWSAMPLES7 <- NEWSAMPLES6[order(NEWSAMPLES6$Treatment),]
 #need to create output file tab delimited for NEWSAMPLES7
 #need to specify which directory to send it to, currently in same directory.
 
-write.table(NEWSAMPLES7, "metadatatest.txt", sep="\t")
+write.table(NEWSAMPLES7, "/OSM/CBR/AF_DATASCHOOL/output/epl/metadataCSV.txt", sep="\t")
 
 #Ready to join with metadata from .gz files
