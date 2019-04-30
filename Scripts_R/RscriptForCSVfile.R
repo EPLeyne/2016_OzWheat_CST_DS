@@ -42,6 +42,6 @@ NEWSAMPLES7 <- NEWSAMPLES6[order(NEWSAMPLES6$Treatment),]
 #need to create output file tab delimited for NEWSAMPLES7
 #need to specify which directory to send it to, currently in same directory.
 
-write.table(NEWSAMPLES7, "/OSM/CBR/AF_DATASCHOOL/output/epl/metadataCSV.txt", sep="\t")
+write.table(NEWSAMPLES7, "/OSM/CBR/AF_DATASCHOOL/output/gmcl/metadataCSV.txt", sep="\t")
 
 #Ready to join with metadata from .gz files
