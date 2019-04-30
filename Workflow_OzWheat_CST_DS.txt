@@ -36,8 +36,21 @@ Workflow for Team OZWHEAT (Emmett & Gordon)
 
 3. Process
    Reading to understand Fastqc.
-   Trial run; start in pearcey, load Fastqc, run from command line,look at output.
-   Understand what Fastqc output looks like.
+   Trial run; start in pearcey, load Fastqc, run from command line,look at output(EL). COMPLETE
+          Performed test run in CLI - 
+                    navigate to Bowen folder with the data, 
+                    load the fastqc module,
+                    type sinteractive -n 1 -c 1,
+                    type the following....
+          fastqc CA73YANXX_8_161220_BPO--000_Other_TAAGGCGA-CTCTCTAT_R_161128_SHADIL_LIB2500_M002_R1.fastq.gz -o '../../output/epl/fastqc_results/'
+              -o = output location and the path to the output is specified (needs to be already created)
+          exit (once complete)
+
+
+
+
+
+   Understand what Fastqc output looks like (EL). - COMPLETE
    Delete this trial output.
    Put command to run a single file inside batch script.
    Submit your script to queue.
