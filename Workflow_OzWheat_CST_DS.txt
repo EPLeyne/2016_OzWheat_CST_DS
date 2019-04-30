@@ -23,6 +23,17 @@ Workflow for Team OZWHEAT (Emmett & Gordon)
    Create Script (Python or R?) to pull this metadata into a file to form a
    tidy data frame with columns seperated by 'tab' characters.
 
+      EL notes: 5 steps:  1. Extract first line of the fastq files for metadata and the file name (Python, EL) DONE - Scripts_Python/firstlineseqread.Py
+                          2. Extract the metadata from the file names keeping the file name, index sequences and rep number (R, EL), DONE - Scripts_R/fastqfilelist.R
+                          3. Knit the two files together in a .csv using the file names so the file will contain the index sequence, rep, file name and the metadata from the header row (R), NOT DONE
+                          4. Extract the data from the .csv file supplied to the vendor so that the index sequence, sample ID (CSIRO) and the treatment are kept (R, GM), DONE - Scripts_Python/RscriptForCSVfile.R
+                          5. Knit the step 4 file with the step 3 file with the index sequence into a .csv file (R), NOT DONE
+
+
+
+
+
+
 3. Process
    Reading to understand Fastqc.
    Trial run; start in pearcey, load Fastqc, run from command line,look at output.
