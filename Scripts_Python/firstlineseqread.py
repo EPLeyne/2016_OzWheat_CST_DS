@@ -10,7 +10,7 @@ for file in files:                                          # for each file in t
         with open ('/OSM/CBR/AF_DATASCHOOL/output/epl/first_lines.csv', 'a') as out_file:    # create the .csv file as 'a' (append) as out_file
             num = 0                                         # create a variable 'num' with the value 0
             for x in in_file:                               # for each item in infile
-                if num<1 and x[0] == '@':                   # if num is less than 1 and the first character in the line in @ (poss not req)
+                if num<1:                   # if num is less than 1 and the first character in the line in @ (poss not req)
                     out_file.write(file)                    # write the file name to the file
                     out_file.write('\t')                    # then a tab
                     out_file.write(x[0:27])                 # write the first 27 characters from the line to the file
