@@ -5,7 +5,7 @@ import gzip
 files = glob.glob('/OSM/CBR/AF_DATASCHOOL/input/2019-04-12_Transcritome/CA73YANXX_8_161220_BPO--030_Other_CGAGGCTG-CGTCTAAT_R_161128_SHADIL_LIB2500_M002_R1.fastq.gz')   #glob.glob to make a list of all the files in the directory (need to change path as needed)
 
 for file in files:                                          # for each file in the list
-    with gzip.open (file, 'r') as in_file:                  # open that file name as 'r' (read) as in_file
+    with gzip.open (file, 'rb') as in_file:                  # open that file name as 'r' (read) as in_file
         with open ('/OSM/CBR/AF_DATASCHOOL/output/epl/first_lines.csv', 'a') as out_file:    # create the .csv file as 'a' (append) as out_file
             num = 0                                         # create a variable 'num' with the value 0
             for x in in_file:                               # for each item in infile
