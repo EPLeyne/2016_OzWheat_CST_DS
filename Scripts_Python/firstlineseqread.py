@@ -9,7 +9,6 @@ for filenames in globfiles:
         in_file = f.read()                  # open that file name as 'r' (read) as in_file
         with open ('/OSM/CBR/AF_DATASCHOOL/output/epl/first_lines.csv', 'a') as out_file:    # create the .csv file as 'a' (append) as out_file
             num = 0                                         # create a variable 'num' with the value 0
-#            for x in in_file:                               # for each item in in_file
             if num < 1:                                 # if num is less than 1
                     out_file.write(filenames)               # write the file name to the file
                     out_file.write('\t')                    # then a tab
