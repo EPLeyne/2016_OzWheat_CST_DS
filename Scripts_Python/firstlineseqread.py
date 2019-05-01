@@ -1,9 +1,6 @@
 # Script to iterate through the .fastq files in the directory and write the first 4 items of metadata from the first line to a file. 
 import glob
 import gzip
- 
-files = glob.glob('data/fastq/*.fastq')   #glob.glob to make a list of all the files in the directory (need to change path as needed)
-import gzip     # Import gzip to unzip the fastq files
 
 files = glob.glob('/OSM/CBR/AF_DATASCHOOL/input/2019-04-12_Transcritome/CA73YANXX_8_161220_BPO--030_Other_CGAGGCTG-CGTCTAAT_R_161128_SHADIL_LIB2500_M002_R1.fastq.gz')   #glob.glob to make a list of all the files in the directory (need to change path as needed)
 
