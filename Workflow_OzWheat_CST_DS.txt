@@ -25,13 +25,9 @@ Workflow for Team OZWHEAT (Emmett & Gordon)
 
       EL notes: 5 steps:  1. Extract first line of the fastq files for metadata and the file name (Python, EL) DONE - Scripts_Python/firstlineseqread.Py
                           2. Extract the metadata from the file names keeping the file name, index sequences and rep number (R, EL), DONE - Scripts_R/fastqfilelist.R                          
-                          3. Extract the data from the .csv file supplied to the vendor so that the index sequence, sample ID (CSIRO) and the treatment are kept (R, GM), DONE - Scripts_Python/RscriptForCSVfile.R
-                          4. Knit files from step 2 & 3 together in a .csv using the file names so the file will contain the index sequence, rep, file name and the metadata from the header row (R, GM), DONE
-                          5. Knit the step 1 file with the step 4 file with the index sequence into a .csv file (R), NOT DONE
-
-
-
-
+                          3. Extract the data from the .csv file supplied to the vendor so that the index sequence, sample ID (CSIRO) and the treatment are kept (R, GM), DONE - Scripts_R/RscriptForCSVfile.R
+                          4. Merge output files from step 2 & 3 together in a .csv using the index sequenece as the common column, file will contain the index sequence, sample_ID, rep. (R, GM), DONE Scripts_R/MergeFiles.R
+                          5. Merge the step 1 file with the step 4 file with the index sequence into a .csv file udsing Rscipt in the bottom half of MergeFiles.R, also in the Rscript is tidying up data from step1 output file before mergeing. Also Sorted by treatment & ID, also had extra column from mergeing that needed removing. (R Gm) DONE Scripts_R/MergeFiles.R
 
 
 3. Process
