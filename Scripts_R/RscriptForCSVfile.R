@@ -14,7 +14,7 @@ NEWSAMPLES2 <- separate(NEWSAMPLES1, "Index", c("Index1", "Index2", "Index_Seque
 
 #Need to remove () around sequence in Index_Sequence
 
-NEWSAMPLES2$Index_Sequence = as.character(gsub("[\\()]", "", NEWSAMPLES2$Index_Sequence))
+NEWSAMPLES2$Index_Sequence = as.character(gsub("[()]", "", NEWSAMPLES2$Index_Sequence))
 NEWSAMPLES3 <- NEWSAMPLES2 [ -c (2,3,6)]
 
 #Need to split Extenal.ID into 2 columns Treatment & Sample_ID
