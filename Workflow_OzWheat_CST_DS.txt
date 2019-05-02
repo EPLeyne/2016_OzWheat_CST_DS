@@ -60,6 +60,8 @@ Workflow for Team OZWHEAT (Emmett & Gordon)
    Understand what Fastqc output looks like (EL). - COMPLETE
    Delete this trial output (EL) - COMPLETE
    Put command to run a single file inside batch script.
+
+   
    Submit your script to queue.
    Check status of your job submission.
    When run completed, check output.
