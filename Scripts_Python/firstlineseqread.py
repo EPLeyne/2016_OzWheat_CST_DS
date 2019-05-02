@@ -8,7 +8,7 @@ globfiles = glob.glob('/OSM/CBR/AF_DATASCHOOL/input/2019-04-12_Transcritome/*.fa
 for filenames in globfiles:
     with gzip.open (filenames, 'rb') as f:      # open that file name as 'r' (read) as in_file
         in_file = f.read()                  
-        with open ('/OSM/CBR/AF_DATASCHOOL/output/epl/first_lines.tsv', 'a') as out_file:    # create the .csv file as 'a' (append) as out_file
+        with open ('/OSM/CBR/AF_DATASCHOOL/output/epl/first_lines.csv', 'a') as out_file:    # create the .csv file as 'a' (append) as out_file
             num = 0                             # create a variable 'num' with the value 0
             if num < 1:                         # if num is less than 1
                     out_file.write(filenames + '\t' + str(in_file[0:27]) + '\n')               # write the file name to the file
