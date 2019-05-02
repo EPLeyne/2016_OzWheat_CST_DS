@@ -35,7 +35,7 @@ write.csv(first_lines6, "/OSM/CBR/AF_DATASCHOOL/output/gmcl/first_lines_refined.
 MetadataMergedFinally1 <- merge(MetadataMerged, first_lines6, by=c("Index_Sequence","rep"))
 
 # Rename a column 1 to Index_Sequence
-names(MetadataMergedFinally1)[5]<-"Vendor.Sample.Name"
+names(MetadataMergedFinally1)[5]<-"Vendor_Sample_Name"
 #Need to redorder columns
 MetadataMergedFinally2 <- MetadataMergedFinally1[c(4,3,2,1,5,6,7,8,9)]
 #Need to insert 0 infront of 1-9, to make 01-09, for Sample_ID
@@ -45,9 +45,7 @@ MetadataMergedFinally2$Sample_ID <- sprintf("%02d", as.numeric(MetadataMergedFin
 MetadataMergedFinally3 <- MetadataMergedFinally2[order(MetadataMergedFinally2$Sample_ID),]
 MetadataMergedFinally4 <- MetadataMergedFinally3[order(MetadataMergedFinally3$Treatment),]
 
-
-
 #so creat output file as .CSV
-write.csv(MetadataMergedFinally3, "/OSM/CBR/AF_DATASCHOOL/output/gmcl/MetadataMergedFinallyv1.csv")
-write.csv(MetadataMergedFinally4, "/OSM/CBR/AF_DATASCHOOL/output/gmcl/MetadataMergedFinallyv2.csv")
+write.csv(MetadataMergedFinally3, "/OSM/CBR/AF_DATASCHOOL/output/gmcl/MetadataMergedFinallyv1.csv", row.names=FALSE)
+write.csv(MetadataMergedFinally4, "/OSM/CBR/AF_DATASCHOOL/output/gmcl/MetadataMergedFinallyv2.csv", row.names=FALSE)
 
