@@ -72,7 +72,7 @@ Workflow for Team OZWHEAT (Emmett & Gordon)
    (consider regular expressions, fastqc command flags to increase the 
 number of files processed at once, for loops, array jobs).
               Scripts_Bash/sbatchscript_full and Scripts_Bash/sbatchscriptgmcl
-
+              Scripts_Bash/.gitignore to ignore all the slurm......out files from git
 
 
 
