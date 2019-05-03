@@ -59,15 +59,24 @@ Workflow for Team OZWHEAT (Emmett & Gordon)
 
    Understand what Fastqc output looks like (EL). - COMPLETE
    Delete this trial output (EL) - COMPLETE
-   Put command to run a single file inside batch script.
-
+   Put command to run a single file inside batch script (Bash, EL & GM) - COMPLETE
+          Created SBATCH file in Scripts_Bash folder to run fastqc on 1 file only
+              Scripts_Bash/sbatchscript
    
-   Submit your script to queue.
-   Check status of your job submission.
-   When run completed, check output.
-   Modify your script to run on ALL your fastqc files.
+   Submit your script to queue (Bash, EL & GM) - COMPLETE
+   Check status of your job submission. (Bash, EL & GM) - COMPLETE
+                                Checked through the slurm-.....out files
+
+   When run completed, check output. (EL & GM) - COMPLETE
+   Modify your script to run on ALL your fastqc files (Bash - EL & GM) - COMPLETE
    (consider regular expressions, fastqc command flags to increase the 
 number of files processed at once, for loops, array jobs).
+              Scripts_Bash/sbatchscript_full and Scripts_Bash/sbatchscriptgmcl
+
+
+
+
+              
 
 4. Align
     Align the sequence reads to a reference genome.
