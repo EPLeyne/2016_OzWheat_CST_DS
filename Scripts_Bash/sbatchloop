@@ -1,0 +1,19 @@
+#!/bin/bash -l
+#SBATCH --job-name=sbatchtest
+#SBATCH --nodes=64
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=4gb
+#SBATCH --time0:10:00
+
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=ley015@csiro.au
+
+module load fastqc/0.11.8
+
+for i in /OSM/CBR/AF_DATASCHOOL/input/2019-04-12_Transcritome/*.fastq.gz
+do
+	fastqc -o /OSM/CBR/AF_DATASCHOOL/output/epl/results/
+done
+
+
