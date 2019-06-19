@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=sbatchlooptest
+#SBATCH --time=02:00:00
+#SBATCH -n 64
+#SBATCH --mem=16g
+#SBATCH --cpus-per-task=1
+#SBATCH --spread-job
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=ley015@csiro.au
+
+
+#load the fastqc module so we can run it.
+module load fastqc
+
+
+inputdir=/OSM/CBR/AF_DATASCHOOL/input/2019-04-12_Transcritome
+outputdir=/OSM/CBR/AF_DATASCHOOL/output/epl/fastqc_results2
+
+
+
+for filename in $inputdir/*.fastq.gz
+do
+  fastqc -t 64 $filename -o $outputdir
+done
